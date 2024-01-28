@@ -12,15 +12,13 @@ class InputHandlerTest {
 
     @BeforeEach
     void setUp() {
-        // Simulate user input data as a string
         String simulatedUserInput = "Team A\nPlayer A\n1\n0\n0\n";
         ByteArrayInputStream bais = new ByteArrayInputStream(simulatedUserInput.getBytes());
 
-        // Prepare to capture the output data
+
         baos = new ByteArrayOutputStream();
         printStream = new PrintStream(baos);
 
-        // Create an InputHandler instance with simulated input and output
         inputHandler = new InputHandler(bais, printStream);
     }
 
@@ -49,12 +47,10 @@ class InputHandlerTest {
         assertEquals(0, player.getCardCount("BLACK"));
         assertFalse(player.isDisqualified());
 
-        // Check if the output contains the prompts for card numbers
         String output = baos.toString();
         assertTrue(output.contains("Enter the number of yellow cards for Player A: "));
         assertTrue(output.contains("Enter the number of red cards for Player A: "));
         assertTrue(output.contains("Enter the number of black cards for Player A: "));
     }
 
-    // You can add more tests to check the behavior when different numbers of cards are entered
 }

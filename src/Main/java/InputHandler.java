@@ -32,7 +32,7 @@ public class InputHandler {
 
         out.print("Enter the number of black cards for " + player.getPlayerName() + ": ");
         int blackCards = scanner.nextInt();
-        scanner.nextLine(); // consume the leftover newline
+        scanner.nextLine();
 
         for (int i = 0; i < yellowCards; i++) cardManager.addYellowCard(player);
         for (int i = 0; i < redCards; i++) cardManager.addRedCard(player);
