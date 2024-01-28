@@ -1,6 +1,6 @@
-import java.util.Scanner;
 import java.io.InputStream;
 import java.io.PrintStream;
+import java.util.Scanner;
 
 public class InputHandler {
     private final Scanner scanner;
@@ -24,15 +24,15 @@ public class InputHandler {
     }
 
     public void assignCardsToPlayer(CardManager cardManager, Player player) {
-        System.out.print("Enter the number of yellow cards for " + player.getPlayerName() + ": ");
+        out.print("Enter the number of yellow cards for " + player.getPlayerName() + ": ");
         int yellowCards = scanner.nextInt();
 
-        System.out.print("Enter the number of red cards for " + player.getPlayerName() + ": ");
+        out.print("Enter the number of red cards for " + player.getPlayerName() + ": ");
         int redCards = scanner.nextInt();
 
-        System.out.print("Enter the number of black cards for " + player.getPlayerName() + ": ");
+        out.print("Enter the number of black cards for " + player.getPlayerName() + ": ");
         int blackCards = scanner.nextInt();
-        scanner.nextLine();
+        scanner.nextLine(); // consume the leftover newline
 
         for (int i = 0; i < yellowCards; i++) cardManager.addYellowCard(player);
         for (int i = 0; i < redCards; i++) cardManager.addRedCard(player);

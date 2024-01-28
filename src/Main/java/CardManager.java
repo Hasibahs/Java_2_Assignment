@@ -1,7 +1,7 @@
 public class CardManager {
-    private static final double FINE_YELLOW = 18.32;
-    private static final double FINE_RED = 41.60;
-    private static final double FINE_BLACK = 349.76;
+    public static final double FINE_YELLOW = 18.32;
+    public static final double FINE_RED = 41.60;
+    public static final double FINE_BLACK = 349.76;
 
     public void addYellowCard(Player player) {
         player.addCard("YELLOW");
